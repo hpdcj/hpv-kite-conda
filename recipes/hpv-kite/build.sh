@@ -21,11 +21,11 @@ cp build/libs/*.jar $PREFIX/libexec/hpv-kite/
 # create executable scripts
 tee ${PREFIX}/bin/hpv-kite << EOF
 #!/bin/sh
-exec \${JAVA_HOME}/bin/java -jar \${CONDA_PREFIX}/libexec/hpv-kite/hpv-kite-${PKG_VERSION}.jar "\$@"
+exec \${JAVA_HOME}/bin/java \${HPV_KITE_PARAMS} -jar \${CONDA_PREFIX}/libexec/hpv-kite/hpv-kite-${PKG_VERSION}.jar "\$@"
 EOF
 
 tee ${PREFIX}/bin/hpv-kite.cmd << EOF
-call %JAVA_HOME%\bin\java -jar %CONDA_PREFIX%\libexec\hpv-kite\hpv-kite-${PKG_VERSION}.jar %*
+call %JAVA_HOME%\bin\java %HPV_KITE_PARAMS% -jar %CONDA_PREFIX%\libexec\hpv-kite\hpv-kite-${PKG_VERSION}.jar %*
 EOF
 
 chmod +x $PREFIX/bin/hpv-kite

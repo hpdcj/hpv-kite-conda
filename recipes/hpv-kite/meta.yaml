@@ -1,5 +1,5 @@
 {% set name = "hpv-kite" %}
-{% set version = "1.0" %}
+{% set version = "1.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/hpdcj/HPV-KITE/archive/refs/tags/{{ version }}.tar.gz
-  sha256: e928ceb741b4b1fd3ade33e6204530e5998c4b5091f4a9d7f2e094bdef897ec7
+  sha256: f4cae44c46114c2021506157722868688ca07518f2b88b185fadef00c72978b1
 
 build:
   noarch: generic
